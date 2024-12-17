@@ -83,7 +83,6 @@ clf.fit(X,y)
 
 ## Apply model to make predictions
 prediction = clf.predict(input_row)
-prediction
 prediction_prob = clf.predict_proba(input_row)
 
 df_prediction_prob = pd.DataFrame(prediction_prob)
@@ -93,7 +92,13 @@ df_prediction_prob.columns = ['Adelie','Gentoo','Chinstrap']
 #                                   1:'Chinstrap',
 #                                   2:'Gentoo'})
 
-df_prediction_prob
+
+#Display Predicted Species
+st.subheader('Predicted Species')
+penguin_species = np.array(['Adelie','Gentoo','Chinstrap'])
+st.success(str(penguins_species[prediction][0]))
+
+
 
 
 
