@@ -23,8 +23,6 @@ with st.expander('Data Visualization'):
 
   st.line_chart(data = df,x= 'bill_length_mm', y='body_mass_g' , color='species')
 
-
-# Data Preparations
 with st.sidebar:
   st.header('Input Parameters')
 # "island","bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g"
@@ -46,6 +44,13 @@ with st.sidebar:
   input_df = pd.DataFrame(data, index=[0])
   input_penguins = pd.concat([input_df,x_raw], axis = 0)
 
+with st.expander('Input Features'):
+  st.write('Input Penguins');
+  input_df
+  st.write('Combined Penguins Data');
+  input_penguins
+
+#Data Preparation
 #Encoding the string columns of X
 encode = ['island','sex']
 df_penguins = pd.get_dummies(input_penguins, columns = encode,prefix = encode)
@@ -53,11 +58,7 @@ df_penguins = pd.get_dummies(input_penguins, columns = encode,prefix = encode)
 #Encoding Y
 
 
-with st.expander('Input Features'):
-  st.write('Input Penguins');
-  input_df
-  st.write('Combined Penguins Data');
-  input_penguins
+
   st.write('Encoded Input Penguins')
   df_penguins[:1]
 
