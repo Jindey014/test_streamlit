@@ -95,7 +95,33 @@ df_prediction_prob.columns = ['Adelie','Gentoo','Chinstrap']
 
 #Display Predicted Species
 st.subheader('Predicted Species')
-df_prediction_prob
+st.data_editor(
+  df_prediction_prob,
+  column_config = {
+    'Adelie':st.columm_config.ProgressColumn(
+      'Adelie',
+      format='%f',
+      min_value = 0,
+      max_value = 1
+      width='medium'
+    ),
+    'Gentoo':st.columm_config.ProgressColumn(
+      'Gentoo',
+      format='%f',
+      min_value = 0,
+      max_value = 1
+      width='medium'
+    ),
+    'Chinstrap':st.columm_config.ProgressColumn(
+      'Chinstrap',
+      format='%f',
+      min_value = 0,
+      max_value = 1
+      width='medium'
+    ),
+  }
+)
+
 penguin_species = np.array(['Adelie','Gentoo','Chinstrap'])
 st.success(str(penguin_species[prediction][0]))
 
