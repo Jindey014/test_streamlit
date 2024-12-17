@@ -98,21 +98,21 @@ st.subheader('Predicted Species')
 st.data_editor(
   df_prediction_prob,
   column_config = {
-    'Adelie':st.columm_config.ProgressColumn(
+    'Adelie':st.column_config.ProgressColumn(
       'Adelie',
       format='%f',
       min_value = 0,
       max_value = 1,
       width='medium'
     ),
-    'Gentoo':st.columm_config.ProgressColumn(
+    'Gentoo':st.column_config.ProgressColumn(
       'Gentoo',
       format='%f',
       min_value = 0,
       max_value = 1,
       width='medium'
     ),
-    'Chinstrap':st.columm_config.ProgressColumn(
+    'Chinstrap':st.column_config.ProgressColumn(
       'Chinstrap',
       format='%f',
       min_value = 0,
