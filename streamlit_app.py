@@ -12,12 +12,12 @@ with st.expander('Data'):
   df
 
   st.write('**X**');
-  x = df.drop('species', axis = 1)
-  x
+  x_raw= df.drop('species', axis = 1)
+  x_raw
 
   st.write('**Y**');
-  y= df.species
-  y
+  y_raw = df.species
+  y_raw
 
 with st.expander('Data Visualization'):
 
@@ -44,11 +44,14 @@ with st.sidebar:
          'body_mass_g':body_mass_g,
          'sex':gender}
   input_df = pd.DataFrame(data, index=[0])
-  input_penguins = pd.concat([input_df,x], axis = 0)
+  input_penguins = pd.concat([input_df,x_raw], axis = 0)
 
-  #Encoding the string columns
-  encode = ['island','sex']
-  df_penguins = pd.get_dummies(input_penguins, columns = encode,prefix = encode)
+#Encoding the string columns of X
+encode = ['island','sex']
+df_penguins = pd.get_dummies(input_penguins, columns = encode,prefix = encode)
+
+#Encoding Y
+
 
 with st.expander('Input Features'):
   st.write('Input Penguins');
