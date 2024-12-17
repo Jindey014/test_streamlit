@@ -59,8 +59,8 @@ df_penguins = pd.get_dummies(input_penguins, columns = encode,prefix = encode)
 
 
 
-  st.write('Encoded Input Penguins')
-  df_penguins[:1]
+st.write('Encoded Input Penguins')
+df_penguins[:1]
 
 
 
