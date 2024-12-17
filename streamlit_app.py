@@ -48,7 +48,7 @@ with st.sidebar:
 
   #Encoding the string columns
   encode = ['island','sex']
-  df_penguins = pd.get_dummies(input_penguins, column = encode,prefix = encode)
+  df_penguins = pd.get_dummies(input_penguins, columns = encode,prefix = encode)
   df_penguins[:1]
 
 with st.expander('Input Features'):
