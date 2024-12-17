@@ -91,6 +91,8 @@ df_prediction_prob.rename(columns={0:'Adelie',
                                   1:'Gentoo',
                                   2:'Chinstrap'})
 
+df_prediction_prob
+
 
 
 
