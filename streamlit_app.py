@@ -102,21 +102,21 @@ st.data_editor(
       'Adelie',
       format='%f',
       min_value = 0,
-      max_value = 1
+      max_value = 1,
       width='medium'
     ),
     'Gentoo':st.columm_config.ProgressColumn(
       'Gentoo',
       format='%f',
       min_value = 0,
-      max_value = 1
+      max_value = 1,
       width='medium'
     ),
     'Chinstrap':st.columm_config.ProgressColumn(
       'Chinstrap',
       format='%f',
       min_value = 0,
-      max_value = 1
+      max_value = 1,
       width='medium'
     ),
   }
