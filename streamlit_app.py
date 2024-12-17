@@ -49,13 +49,15 @@ with st.sidebar:
   #Encoding the string columns
   encode = ['island','sex']
   df_penguins = pd.get_dummies(input_penguins, columns = encode,prefix = encode)
-  df_penguins[:1]
 
 with st.expander('Input Features'):
   st.write('Input Penguins');
   input_df
   st.write('Combined Penguins Data');
   input_penguins
+  st.write('Encoded Input Penguins')
+  df_penguins[:1]
+
 
 
   
